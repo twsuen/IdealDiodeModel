@@ -1,0 +1,28 @@
+* C:\Users\twsue_000\Documents\GitHub\IdealDiodeModel\bin\Debug\DiodeModel.asc
+I1 N003 N001 5.9375
+D1 N001 N003 ID1
+Rs1 N001 N002 0.00768
+Rsh1 N001 N003 64
+I2 N005 N004 5.9375
+D2 N004 N005 ID2
+Rs2 N004 N003 0.00768
+Rsh2 N004 N005 64
+I3 N007 N006 5.9375
+D3 N006 N007 ID3
+Rs3 N006 N005 0.00768
+Rsh3 N006 N007 64
+I4 0 N008 5.9375
+D4 N008 0 ID4
+Rs4 N008 N007 0.00768
+Rsh4 N008 0 64
+V1 N002 0 0
+.model D D
+.lib C:\Program Files (x86)\LTC\LTspiceIV\lib\cmp\standard.dio
+.model ID1 D(Is=1.5625E-11 N=1 Tnom=25)
+.model ID2 D(Is=1.5625E-10 N=1 Tnom=25)
+.model ID3 D(Is=1.5625E-11 N=1 Tnom=25)
+.model ID4 D(Is=1.5625E-11 N=1 Tnom=25)
+.dc V1 0 3.2 0.02
+.save I(V1) V(n002) V(n003) V(n005) V(n007)
+.backanno
+.end

@@ -1,0 +1,9 @@
+C:\Users\twsue_000\Documents\GitHub\IdealDiodeModel\bin\Debug\IdealDiode1.exe.config
+C:\Users\twsue_000\Documents\GitHub\IdealDiodeModel\bin\Debug\IdealDiode1.exe
+C:\Users\twsue_000\Documents\GitHub\IdealDiodeModel\bin\Debug\IdealDiode1.pdb
+C:\Users\twsue_000\Documents\GitHub\IdealDiodeModel\obj\Debug\IdealDiode1.csprojResolveAssemblyReference.cache
+C:\Users\twsue_000\Documents\GitHub\IdealDiodeModel\obj\Debug\IdealDiode1.Form1.resources
+C:\Users\twsue_000\Documents\GitHub\IdealDiodeModel\obj\Debug\IdealDiode1.Properties.Resources.resources
+C:\Users\twsue_000\Documents\GitHub\IdealDiodeModel\obj\Debug\IdealDiode1.csproj.GenerateResource.Cache
+C:\Users\twsue_000\Documents\GitHub\IdealDiodeModel\obj\Debug\IdealDiode1.exe
+C:\Users\twsue_000\Documents\GitHub\IdealDiodeModel\obj\Debug\IdealDiode1.pdb
