@@ -3,7 +3,7 @@ I1 N003 N001 5.9375
 D1 N001 N003 ID1
 Rs1 N001 N002 0.00768
 Rsh1 N001 N003 64
-I2 N005 N004 5.9375
+I2 N005 N004 4.375
 D2 N004 N005 ID2
 Rs2 N004 N003 0.00768
 Rsh2 N004 N005 64
@@ -19,7 +19,7 @@ V1 N002 0 0
 .model D D
 .lib C:\Program Files (x86)\LTC\LTspiceIV\lib\cmp\standard.dio
 .model ID1 D(Is=1.5625E-11 N=1 Tnom=25)
-.model ID2 D(Is=1.5625E-10 N=1 Tnom=25)
+.model ID2 D(Is=1.5625E-11 N=1 Tnom=25)
 .model ID3 D(Is=1.5625E-11 N=1 Tnom=25)
 .model ID4 D(Is=1.5625E-11 N=1 Tnom=25)
 .dc V1 0 3.2 0.02

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.lightCurrentTextBox = new System.Windows.Forms.TextBox();
             this.lightCurrentLabel = new System.Windows.Forms.Label();
             this.diodeCurrentLabel = new System.Windows.Forms.Label();
@@ -47,8 +47,8 @@
             this.modelButton = new System.Windows.Forms.Button();
             this.cellDataGridView = new System.Windows.Forms.DataGridView();
             this.fillButton = new System.Windows.Forms.Button();
-            this.copyButton = new System.Windows.Forms.Button();
-            this.viewButton = new System.Windows.Forms.Button();
+            this.deviceToCellButton = new System.Windows.Forms.Button();
+            this.cellToDeviceButton = new System.Windows.Forms.Button();
             this.cellAreaTextBox = new System.Windows.Forms.TextBox();
             this.cellAreaLabel = new System.Windows.Forms.Label();
             this.plotModuleButton = new System.Windows.Forms.Button();
@@ -58,6 +58,8 @@
             this.moduleEndVoltageTextBox = new System.Windows.Forms.TextBox();
             this.moduleStartVoltageTextBox = new System.Windows.Forms.TextBox();
             this.clearButton = new System.Windows.Forms.Button();
+            this.voltageRangeDeviceLabel = new System.Windows.Forms.Label();
+            this.voltageRangeModuleLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.IVChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IVDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cellDataGridView)).BeginInit();
@@ -155,13 +157,13 @@
             // 
             // IVChart
             // 
-            chartArea5.Name = "IVChartArea";
-            this.IVChart.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.IVChart.Legends.Add(legend5);
+            chartArea2.Name = "IVChartArea";
+            this.IVChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.IVChart.Legends.Add(legend2);
             this.IVChart.Location = new System.Drawing.Point(334, 12);
             this.IVChart.Name = "IVChart";
-            this.IVChart.Size = new System.Drawing.Size(532, 422);
+            this.IVChart.Size = new System.Drawing.Size(532, 449);
             this.IVChart.TabIndex = 10;
             this.IVChart.Text = "IV";
             this.IVChart.DoubleClick += new System.EventHandler(this.IVChart_DoubleClick);
@@ -170,9 +172,9 @@
             // 
             this.IVDataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.IVDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.IVDataGridView.Location = new System.Drawing.Point(872, 12);
+            this.IVDataGridView.Location = new System.Drawing.Point(872, 15);
             this.IVDataGridView.Name = "IVDataGridView";
-            this.IVDataGridView.Size = new System.Drawing.Size(201, 422);
+            this.IVDataGridView.Size = new System.Drawing.Size(201, 446);
             this.IVDataGridView.TabIndex = 11;
             // 
             // numCellsLabel
@@ -195,7 +197,7 @@
             // 
             // modelButton
             // 
-            this.modelButton.Location = new System.Drawing.Point(214, 414);
+            this.modelButton.Location = new System.Drawing.Point(190, 441);
             this.modelButton.Name = "modelButton";
             this.modelButton.Size = new System.Drawing.Size(100, 20);
             this.modelButton.TabIndex = 14;
@@ -222,25 +224,25 @@
             this.fillButton.UseVisualStyleBackColor = true;
             this.fillButton.Click += new System.EventHandler(this.fillButton_Click);
             // 
-            // copyButton
+            // deviceToCellButton
             // 
-            this.copyButton.Location = new System.Drawing.Point(122, 220);
-            this.copyButton.Name = "copyButton";
-            this.copyButton.Size = new System.Drawing.Size(100, 20);
-            this.copyButton.TabIndex = 17;
-            this.copyButton.Text = "Copy";
-            this.copyButton.UseVisualStyleBackColor = true;
-            this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
+            this.deviceToCellButton.Location = new System.Drawing.Point(122, 220);
+            this.deviceToCellButton.Name = "deviceToCellButton";
+            this.deviceToCellButton.Size = new System.Drawing.Size(100, 20);
+            this.deviceToCellButton.TabIndex = 17;
+            this.deviceToCellButton.Text = "Device to Cell";
+            this.deviceToCellButton.UseVisualStyleBackColor = true;
+            this.deviceToCellButton.Click += new System.EventHandler(this.copyButton_Click);
             // 
-            // viewButton
+            // cellToDeviceButton
             // 
-            this.viewButton.Location = new System.Drawing.Point(228, 221);
-            this.viewButton.Name = "viewButton";
-            this.viewButton.Size = new System.Drawing.Size(100, 20);
-            this.viewButton.TabIndex = 18;
-            this.viewButton.Text = "View";
-            this.viewButton.UseVisualStyleBackColor = true;
-            this.viewButton.Click += new System.EventHandler(this.viewButton_Click);
+            this.cellToDeviceButton.Location = new System.Drawing.Point(228, 221);
+            this.cellToDeviceButton.Name = "cellToDeviceButton";
+            this.cellToDeviceButton.Size = new System.Drawing.Size(100, 20);
+            this.cellToDeviceButton.TabIndex = 18;
+            this.cellToDeviceButton.Text = "Cell to Device";
+            this.cellToDeviceButton.UseVisualStyleBackColor = true;
+            this.cellToDeviceButton.Click += new System.EventHandler(this.viewButton_Click);
             // 
             // cellAreaTextBox
             // 
@@ -262,7 +264,7 @@
             // 
             // plotModuleButton
             // 
-            this.plotModuleButton.Location = new System.Drawing.Point(108, 414);
+            this.plotModuleButton.Location = new System.Drawing.Point(190, 415);
             this.plotModuleButton.Name = "plotModuleButton";
             this.plotModuleButton.Size = new System.Drawing.Size(100, 20);
             this.plotModuleButton.TabIndex = 21;
@@ -272,7 +274,7 @@
             // 
             // plotDeviceButton
             // 
-            this.plotDeviceButton.Location = new System.Drawing.Point(108, 141);
+            this.plotDeviceButton.Location = new System.Drawing.Point(190, 141);
             this.plotDeviceButton.Name = "plotDeviceButton";
             this.plotDeviceButton.Size = new System.Drawing.Size(100, 20);
             this.plotDeviceButton.TabIndex = 22;
@@ -282,7 +284,7 @@
             // 
             // cellStartVoltageTextBox
             // 
-            this.cellStartVoltageTextBox.Location = new System.Drawing.Point(16, 142);
+            this.cellStartVoltageTextBox.Location = new System.Drawing.Point(98, 142);
             this.cellStartVoltageTextBox.Name = "cellStartVoltageTextBox";
             this.cellStartVoltageTextBox.Size = new System.Drawing.Size(40, 20);
             this.cellStartVoltageTextBox.TabIndex = 23;
@@ -291,7 +293,7 @@
             // 
             // cellEndVoltageTextBox
             // 
-            this.cellEndVoltageTextBox.Location = new System.Drawing.Point(62, 142);
+            this.cellEndVoltageTextBox.Location = new System.Drawing.Point(144, 142);
             this.cellEndVoltageTextBox.Name = "cellEndVoltageTextBox";
             this.cellEndVoltageTextBox.Size = new System.Drawing.Size(40, 20);
             this.cellEndVoltageTextBox.TabIndex = 24;
@@ -300,7 +302,7 @@
             // 
             // moduleEndVoltageTextBox
             // 
-            this.moduleEndVoltageTextBox.Location = new System.Drawing.Point(62, 414);
+            this.moduleEndVoltageTextBox.Location = new System.Drawing.Point(144, 415);
             this.moduleEndVoltageTextBox.Name = "moduleEndVoltageTextBox";
             this.moduleEndVoltageTextBox.Size = new System.Drawing.Size(40, 20);
             this.moduleEndVoltageTextBox.TabIndex = 26;
@@ -309,7 +311,7 @@
             // 
             // moduleStartVoltageTextBox
             // 
-            this.moduleStartVoltageTextBox.Location = new System.Drawing.Point(16, 414);
+            this.moduleStartVoltageTextBox.Location = new System.Drawing.Point(98, 415);
             this.moduleStartVoltageTextBox.Name = "moduleStartVoltageTextBox";
             this.moduleStartVoltageTextBox.Size = new System.Drawing.Size(40, 20);
             this.moduleStartVoltageTextBox.TabIndex = 25;
@@ -326,11 +328,31 @@
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
+            // voltageRangeDeviceLabel
+            // 
+            this.voltageRangeDeviceLabel.AutoSize = true;
+            this.voltageRangeDeviceLabel.Location = new System.Drawing.Point(14, 145);
+            this.voltageRangeDeviceLabel.Name = "voltageRangeDeviceLabel";
+            this.voltageRangeDeviceLabel.Size = new System.Drawing.Size(78, 13);
+            this.voltageRangeDeviceLabel.TabIndex = 28;
+            this.voltageRangeDeviceLabel.Text = "Voltage Range";
+            // 
+            // voltageRangeModuleLabel
+            // 
+            this.voltageRangeModuleLabel.AutoSize = true;
+            this.voltageRangeModuleLabel.Location = new System.Drawing.Point(14, 418);
+            this.voltageRangeModuleLabel.Name = "voltageRangeModuleLabel";
+            this.voltageRangeModuleLabel.Size = new System.Drawing.Size(78, 13);
+            this.voltageRangeModuleLabel.TabIndex = 29;
+            this.voltageRangeModuleLabel.Text = "Voltage Range";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 444);
+            this.ClientSize = new System.Drawing.Size(1087, 470);
+            this.Controls.Add(this.voltageRangeModuleLabel);
+            this.Controls.Add(this.voltageRangeDeviceLabel);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.moduleEndVoltageTextBox);
             this.Controls.Add(this.moduleStartVoltageTextBox);
@@ -340,8 +362,8 @@
             this.Controls.Add(this.plotModuleButton);
             this.Controls.Add(this.cellAreaLabel);
             this.Controls.Add(this.cellAreaTextBox);
-            this.Controls.Add(this.viewButton);
-            this.Controls.Add(this.copyButton);
+            this.Controls.Add(this.cellToDeviceButton);
+            this.Controls.Add(this.deviceToCellButton);
             this.Controls.Add(this.fillButton);
             this.Controls.Add(this.cellDataGridView);
             this.Controls.Add(this.modelButton);
@@ -389,8 +411,8 @@
         private System.Windows.Forms.Button modelButton;
         private System.Windows.Forms.DataGridView cellDataGridView;
         private System.Windows.Forms.Button fillButton;
-        private System.Windows.Forms.Button copyButton;
-        private System.Windows.Forms.Button viewButton;
+        private System.Windows.Forms.Button deviceToCellButton;
+        private System.Windows.Forms.Button cellToDeviceButton;
         private System.Windows.Forms.TextBox cellAreaTextBox;
         private System.Windows.Forms.Label cellAreaLabel;
         private System.Windows.Forms.Button plotModuleButton;
@@ -400,6 +422,8 @@
         private System.Windows.Forms.TextBox moduleEndVoltageTextBox;
         private System.Windows.Forms.TextBox moduleStartVoltageTextBox;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Label voltageRangeDeviceLabel;
+        private System.Windows.Forms.Label voltageRangeModuleLabel;
     }
 }
 
